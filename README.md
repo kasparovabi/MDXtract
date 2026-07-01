@@ -10,14 +10,14 @@ Included are also tools to extract and convert ADPCM sample data from the supple
 
 **mdx2syx.py**
 ```
-mdx2syx.py [-h, --help] [-v, --verbose] [infiles ...]
+python3 -m mdx2syx [-h, --help] [-v, --verbose] [infiles ...]
 ```
  - Instrument data will be converted and written as `<filename>.syx`.
  - In verbose mode some intriguing data will be printed to stdout.
 
 **pmd2syx.py**
 ```
-pmd2syx.py [-h, --help] [-v, --verbose] [infiles ...]
+python3 -m pmd2syx [-h, --help] [-v, --verbose] [infiles ...]
 ```
  - Common PMD extensions are .M and .M2.
  - Instrument data will be converted and written as `<filename>.syx`.
@@ -25,7 +25,7 @@ pmd2syx.py [-h, --help] [-v, --verbose] [infiles ...]
 
 **pdx2wav.py**
 ```
-pdx2wav.py [-h] [-v] [--rate R] [--gain G] [--dcnorm] [infiles ...]
+python3 -m pdx2wav [-h] [-v] [--rate R] [--gain G] [--dcnorm] [infiles ...]
 ```
  - ADPCM data will be converted and written as `<filename>_<n>.wav`.
  - Default sample rate is 15625 Hz, the most common setting on a X68000.
@@ -33,7 +33,7 @@ pdx2wav.py [-h] [-v] [--rate R] [--gain G] [--dcnorm] [infiles ...]
 
 **pmd2wav.py**
 ```
-pmd2wav.py [-h] [-v] --type [type] [--rate R] [--gain G] [--dcnorm] [infiles ...]
+python3 -m pmd2wav [-h] [-v] --type [type] [--rate R] [--gain G] [--dcnorm] [infiles ...]
 ```
  - Common PMD sample archive extensions include .PPC, .P86 and .PPS.
  - It is usually not needed to specify `type`. When omitted the tool will auto detect the format by looking at the file header, and if nothing can be deduced from that it falls back to the file extension. 
